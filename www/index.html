@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>npm monitor</title>
+
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/events.css" />
+    </head>
+    <body>
+        <script type="text/x-handlebars-template" id="PushEvent">
+        <article class="push">
+            <time datetime="{{created_at}}">{{vagueTime created_at}}</time>
+
+            <h1>
+                <a href="https://github.com/{{actor.login}}">{{actor.login}}</a>
+                pushed to {{branchName payload.ref}} at
+                <a href="https://github.com/{{repo.name}}">{{repo.name}}</a>
+            </h1>
+
+            <ul>
+                {{#each payload.commits}}
+                <li>
+                    <a href="https://github.com/{{../repo.name}}/commit/{{sha}}">{{shortHash sha}}</a>
+                    <q title="{{message}}">{{singleLine message}}</q>
+                </li>
+                {{/each}}
+            </ul>
+        </article>
+        </script>
+
+        <script type="text/x-handlebars-template" id="IssueCommentEvent">
+        <article class="issue-comment">
+            <time datetime="{{created_at}}">{{vagueTime created_at}}</time>
+
+            <h1>
+                <a href="https://github.com/{{actor.login}}">{{actor.login}}</a>
+                commented on issue
+                <a href="{{payload.issue.html_url}}" title="{{payload.issue.title}}">{{repo.name}}#{{payload.issue.number}}</a>
+            </h1>
+
+            <p title="{{payload.comment.body}}">{{truncate payload.comment.body}}</p>
+        </article>
+        </script>
+
+        <script src="bundle.js"></script>
+    </body>
+</html>

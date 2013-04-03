@@ -1,0 +1,6 @@
+/node_modules/
+/npm-debug.log
+
+/www/bundle.js
+/www/styles/*.css
+!/www/styles/reset.css
