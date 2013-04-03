@@ -1,6 +1,7 @@
 # A Client-Side Packages Demo
 
-This is a demo application built using npm packages plus browserify, as part of my “Client-Side Package Management”
+This is a demo application built using npm packages plus browserify, as part of my
+[“Client-Side Package Management”](http://www.slideshare.net/domenicdenicola/client-side-packages)
 talk for HTML5DevConf. It shows the last few commits to npm, by accessing the GitHub API over XMLHttpRequest.
 
 ## How to Use
