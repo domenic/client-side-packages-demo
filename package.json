@@ -1,28 +1,30 @@
 {
-    "name": "npm-commits",
-    "description": "Shows you the last few commits to npm's GitHub repository.",
-    "version": "0.0.0",
-    "author": "Domenic Denicola <domenic@domenicdenicola.com> (http://domenicdenicola.com)",
-    "license": "WTFPL",
-
-    "scripts": {
-        "lint": "jshint lib",
-        "build": "browserify lib/entry.js -o www/bundle.js --debug && stylus www/styles",
-        "open": "opener ./www/index.html",
-        "dev": "npm run lint && npm run build && npm run open"
-    },
-
-    "dependencies": {
-        "handlebars": ">= 1.0.10 <2",
-        "jquery-browserify": "~1.8.1",
-        "q": "~0.9.2",
-        "underscore": "~1.4.3",
-        "vague-time": "~0.4.1"
-    },
-    "devDependencies": {
-        "jshint": "~1.1",
-        "stylus": "~0.32.1",
-        "browserify": "~2.11",
-        "opener": "~1.3"
-    }
+  "name": "client-side-demo",
+  "description": "A demo of client-side best practices using npm, browserify, and Grunt.",
+  "version": "0.0.0",
+  "author": "Domenic Denicola <domenic@domenicdenicola.com> (http://domenicdenicola.com)",
+  "license": "WTFPL",
+  "scripts": {
+    "lint": "grunt jshint",
+    "dev": "grunt dev",
+    "dist": "grunt dist",
+    "watch": "grunt watch"
+  },
+  "dependencies": {
+    "handlebars": "~1.0.12",
+    "jquery-browserify": "~1.8.1",
+    "q": "~0.9.6",
+    "underscore": "~1.5.0",
+    "vague-time": "~0.5.4"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.9",
+    "grunt": "~0.4.1",
+    "grunt-browserify": "~1.2.0",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-stylus": "~0.5.1",
+    "grunt-concurrent": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-contrib-jshint": "~0.6.0"
+  }
 }
