@@ -55,11 +55,6 @@ At development time, many more packages are used, mainly through Grunt plugins t
 * Add tests, of course! And integrate them into the appropriate places in the Grunt pipeline.
 * Separate out templates into individual files, and use [hbsfy](https://npmjs.org/package/hbsfy) to precompile them,
   instead of inlining them into `index.html`.
-* The [github.js](lib/github.js) module is starting to look like it should become its own npm package, isolated from
-  the rest of the app behind a concern boundary. Maybe even the template rendering could be factored out into its
-  own package, with a public API that consumes GitHub API objects and outputs HTML strings. This would have the
-  benefit of making Handlebars an implementation detail, so that such a package would be usable even for people who
-  don't care for Handlebars as their templating engine.
 * Add a simple (Node-based) server that will block on requests until the watch is done running: this would avoid the
   always-frustrating phenomenom of reloading the page only to find the watch hasn't quite run yet.
-* Keep bugging @rwldrn until jQuery 2.0 finally ends up on npm.
+* Switch to the real jQuery package once it finally ends up on npm.
