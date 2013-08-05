@@ -39,13 +39,13 @@ Oh, and to view the page, just open `www/index.html`!
 The following npm packages are used, but completely client-side!
 
 * [handlebars](https://npmjs.org/package/handlebars) for templating: see `templates.js` and `addHandlebarsHelpers.js`.
-* [jquery-browserify](https://npmjs.org/package/jquery-browserify) for Ajax and some DOM: although the 2.0 release of
+* [jquery2](https://npmjs.org/package/jquery2) for Ajax and some DOM: although the 2.0 release of
   jQuery [will be published](http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/) directly to npm, and
-  [use the CommonJS module format](https://github.com/jquery/jquery/pull/1103), until then we need a hacked CommonJS
+  [use the CommonJS module format](https://github.com/jquery/jquery/pull/1103), until then we need to use a third-party
   version.
 * [q](https://npmjs.org/package/q) for doing asynchronous operations using promises (in particular, assimilating
   jQuery's broken promises).
-* [underscore](https://npmjs.org/package/underscore) for some basic helpers like `_.extend`, `_.has`, and `_.debounce`.
+* [lodash](https://npmjs.org/package/lodash) for some basic helpers like `_.extend`, `_.has`, and `_.debounce`.
 * [vague-time](https://npmjs.org/package/vague-time) for rendering times like “55 minutes ago.”
 
 At development time, many more packages are used, mainly through Grunt plugins that wrap them.
