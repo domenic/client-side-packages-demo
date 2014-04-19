@@ -39,10 +39,7 @@ Oh, and to view the page, just open `www/index.html`!
 The following npm packages are used, but completely client-side!
 
 * [handlebars](https://npmjs.org/package/handlebars) for templating: see `templates.js` and `addHandlebarsHelpers.js`.
-* [jquery2](https://npmjs.org/package/jquery2) for Ajax and some DOM: although the 2.0 release of
-  jQuery [will be published](http://blog.jquery.com/2013/03/01/jquery-2-0-beta-2-released/) directly to npm, and
-  [use the CommonJS module format](https://github.com/jquery/jquery/pull/1103), until then we need to use a third-party
-  version.
+* [jquery](https://npmjs.org/package/jquery) for Ajax and some DOM.
 * [q](https://npmjs.org/package/q) for doing asynchronous operations using promises (in particular, assimilating
   jQuery's broken promises).
 * [lodash](https://npmjs.org/package/lodash) for some basic helpers like `_.extend`, `_.has`, and `_.debounce`.
@@ -57,4 +54,3 @@ At development time, many more packages are used, mainly through Grunt plugins t
   instead of inlining them into `index.html`.
 * Add a simple (Node-based) server that will block on requests until the watch is done running: this would avoid the
   always-frustrating phenomenom of reloading the page only to find the watch hasn't quite run yet.
-* Switch to the real jQuery package once it finally ends up on npm.
